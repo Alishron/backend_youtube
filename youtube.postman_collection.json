@@ -1,0 +1,1075 @@
+{
+  "info": {
+    "_postman_id": "68bc76d4-8c62-4403-ae41-0c820ffe1b7c",
+    "name": "youtube",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31969850"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "/register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/users/register",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"56\",\r\n  \"password\": \"321\",\r\n  \"email\": \"email@12.com\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/users/login",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/logout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/users/logout",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "refereshToken",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/users/refresh-token",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "refresh-token"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "currentUser",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/users/current-user",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "current-user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "changePassword",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"oldPassword\" : \"321\",\r\n    \"newPassword\" : \"123\"\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/users/change-password",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "change-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateAccountDetails",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fullName\" : \"Sahil\",\r\n    \"email\" :\"email@12.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/users/update-account",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "update-account"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "avatar",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "avatar",
+                  "type": "file",
+                  "uuid": "caaca8a8-060c-4bfa-a6e4-a8cef84777d7",
+                  "src": "/C:/Users/Alish Sahdev/Downloads/wall/backiee-124502-landscape.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{server}}/users/avatar",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "avatar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "cover-image",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/users/cover-image",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "cover-image"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "username",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "avatar",
+                  "type": "file",
+                  "uuid": "caaca8a8-060c-4bfa-a6e4-a8cef84777d7",
+                  "src": "/C:/Users/Alish Sahdev/Downloads/wall/backiee-124502-landscape.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{server}}/users/c/:username",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "c",
+                ":username"
+              ],
+              "variable": [
+                {
+                  "key": "username",
+                  "value": "56"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "history",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/users/history",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "users",
+                "history"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Videos",
+      "item": [
+        {
+          "name": "postVideo",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "My first video",
+                  "type": "text",
+                  "uuid": "78cd6980-3b4b-4b57-aad7-847514dd682d"
+                },
+                {
+                  "key": "description",
+                  "value": "testing upload",
+                  "type": "text",
+                  "uuid": "0ba3daef-3735-4480-bd12-30741a8d985e"
+                },
+                {
+                  "key": "videoFile",
+                  "type": "file",
+                  "uuid": "a9e4dd23-cf29-4f48-bd2f-6a2a9321d4f3",
+                  "src": "/C:/Users/Alish Sahdev/Downloads/Cinematic_Jewellery_Advertisement_Creation.mp4"
+                },
+                {
+                  "key": "thumbnail",
+                  "type": "file",
+                  "uuid": "e57261af-0107-40ab-a69c-0433eff3b729",
+                  "src": "/C:/Users/Alish Sahdev/OneDrive/Pictures/Blue White Modern Minimalist Explore The Space Dekstop Wallpaper (2).png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{server}}/videos",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "videos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllVideos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/videos",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "videos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "searchById",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "IsPublished",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/videos/toggle/publish/6a22c0f25e2983fa173a2905",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "videos",
+                "toggle",
+                "publish",
+                "6a22c0f25e2983fa173a2905"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Subscription",
+      "item": [
+        {
+          "name": "getSubsribers",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "My first video",
+                  "type": "text",
+                  "uuid": "78cd6980-3b4b-4b57-aad7-847514dd682d"
+                },
+                {
+                  "key": "description",
+                  "value": "testing upload",
+                  "type": "text",
+                  "uuid": "0ba3daef-3735-4480-bd12-30741a8d985e"
+                },
+                {
+                  "key": "videoFile",
+                  "type": "file",
+                  "uuid": "a9e4dd23-cf29-4f48-bd2f-6a2a9321d4f3",
+                  "src": "/C:/Users/Alish Sahdev/Downloads/Cinematic_Jewellery_Advertisement_Creation.mp4"
+                },
+                {
+                  "key": "thumbnail",
+                  "type": "file",
+                  "uuid": "e57261af-0107-40ab-a69c-0433eff3b729",
+                  "src": "/C:/Users/Alish Sahdev/OneDrive/Pictures/Blue White Modern Minimalist Explore The Space Dekstop Wallpaper (2).png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{server}}/subscriptions/c/6a182f43e79e2691b54e0715",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "subscriptions",
+                "c",
+                "6a182f43e79e2691b54e0715"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ToggleSubsribe",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "My first video",
+                  "type": "text",
+                  "uuid": "78cd6980-3b4b-4b57-aad7-847514dd682d"
+                },
+                {
+                  "key": "description",
+                  "value": "testing upload",
+                  "type": "text",
+                  "uuid": "0ba3daef-3735-4480-bd12-30741a8d985e"
+                },
+                {
+                  "key": "videoFile",
+                  "type": "file",
+                  "uuid": "a9e4dd23-cf29-4f48-bd2f-6a2a9321d4f3",
+                  "src": "/C:/Users/Alish Sahdev/Downloads/Cinematic_Jewellery_Advertisement_Creation.mp4"
+                },
+                {
+                  "key": "thumbnail",
+                  "type": "file",
+                  "uuid": "e57261af-0107-40ab-a69c-0433eff3b729",
+                  "src": "/C:/Users/Alish Sahdev/OneDrive/Pictures/Blue White Modern Minimalist Explore The Space Dekstop Wallpaper (2).png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{server}}/subscriptions/c/6a182f43e79e2691b54e0715",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "subscriptions",
+                "c",
+                "6a182f43e79e2691b54e0715"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getSubsribedChannel",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "My first video",
+                  "type": "text",
+                  "uuid": "78cd6980-3b4b-4b57-aad7-847514dd682d"
+                },
+                {
+                  "key": "description",
+                  "value": "testing upload",
+                  "type": "text",
+                  "uuid": "0ba3daef-3735-4480-bd12-30741a8d985e"
+                },
+                {
+                  "key": "videoFile",
+                  "type": "file",
+                  "uuid": "a9e4dd23-cf29-4f48-bd2f-6a2a9321d4f3",
+                  "src": "/C:/Users/Alish Sahdev/Downloads/Cinematic_Jewellery_Advertisement_Creation.mp4"
+                },
+                {
+                  "key": "thumbnail",
+                  "type": "file",
+                  "uuid": "e57261af-0107-40ab-a69c-0433eff3b729",
+                  "src": "/C:/Users/Alish Sahdev/OneDrive/Pictures/Blue White Modern Minimalist Explore The Space Dekstop Wallpaper (2).png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{server}}/subscriptions/u/6a22c5f5d6fabf1d9ee7fecd",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "subscriptions",
+                "u",
+                "6a22c5f5d6fabf1d9ee7fecd"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Comments",
+      "item": [
+        {
+          "name": "postComments",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTIyYzVmNWQ2ZmFiZjFkOWVlN2ZlY2QiLCJlbWFpbCI6InNhaGRldmFsaXNoMEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InNhaGRldmFsaXNoMEBnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFsaXNoIFNhaGRldiIsImlhdCI6MTc4MDY2NDEyMywiZXhwIjoxNzgwNzUwNTIzfQ.4C7qCpsqstmoCz1m6Ilpnfbypg_QjkwbG_z5VRp0ToU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"content\":\"Amazing video bro\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/comments/6a22c0f25e2983fa173a2905",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "comments",
+                "6a22c0f25e2983fa173a2905"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getCommentVideo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/comments/6a22c0f25e2983fa173a2905",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "comments",
+                "6a22c0f25e2983fa173a2905"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tweets",
+      "item": [
+        {
+          "name": "createTweets",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTIyYzVmNWQ2ZmFiZjFkOWVlN2ZlY2QiLCJlbWFpbCI6InNhaGRldmFsaXNoMEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InNhaGRldmFsaXNoMEBnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFsaXNoIFNhaGRldiIsImlhdCI6MTc4MDY2NDEyMywiZXhwIjoxNzgwNzUwNTIzfQ.4C7qCpsqstmoCz1m6Ilpnfbypg_QjkwbG_z5VRp0ToU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"content\":\"Learning backend development today 🚀\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/tweets",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "tweets"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getTweets",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTIyYzVmNWQ2ZmFiZjFkOWVlN2ZlY2QiLCJlbWFpbCI6InNhaGRldmFsaXNoMEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InNhaGRldmFsaXNoMEBnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFsaXNoIFNhaGRldiIsImlhdCI6MTc4MDY2NDEyMywiZXhwIjoxNzgwNzUwNTIzfQ.4C7qCpsqstmoCz1m6Ilpnfbypg_QjkwbG_z5VRp0ToU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/tweets/user/6a22c5f5d6fabf1d9ee7fecd",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "tweets",
+                "user",
+                "6a22c5f5d6fabf1d9ee7fecd"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTIyYzVmNWQ2ZmFiZjFkOWVlN2ZlY2QiLCJlbWFpbCI6InNhaGRldmFsaXNoMEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InNhaGRldmFsaXNoMEBnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFsaXNoIFNhaGRldiIsImlhdCI6MTc4MDY2NDEyMywiZXhwIjoxNzgwNzUwNTIzfQ.4C7qCpsqstmoCz1m6Ilpnfbypg_QjkwbG_z5VRp0ToU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{server}}/tweets/6a22cce2b127ab36cdbcbbae",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "tweets",
+                "6a22cce2b127ab36cdbcbbae"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Likes",
+      "item": [
+        {
+          "name": "videoLike",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/likes/toggle/v/:VIDEO_ID",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "likes",
+                "toggle",
+                "v",
+                ":VIDEO_ID"
+              ],
+              "variable": [
+                {
+                  "key": "VIDEO_ID",
+                  "value": "6a22c0f25e2983fa173a2905"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Commentlike",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/likes/toggle/c/:COMMENT_ID",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "likes",
+                "toggle",
+                "c",
+                ":COMMENT_ID"
+              ],
+              "variable": [
+                {
+                  "key": "COMMENT_ID",
+                  "value": "6a22c992c9da9e97ccb09607"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TweetLike",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/likes/toggle/t/:TWEET_ID",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "likes",
+                "toggle",
+                "t",
+                ":TWEET_ID"
+              ],
+              "variable": [
+                {
+                  "key": "TWEET_ID",
+                  "value": "6a22ccebb127ab36cdbcbbb2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getLikedVideos",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Playlist",
+      "item": [
+        {
+          "name": "createPlaylist",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"name\":\"Backend Tutorials\",\r\n   \"description\":\"All backend learning videos\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/playlist",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "playlist"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getPlaylist",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"name\":\"Backend Tutorials\",\r\n   \"description\":\"All backend learning videos\"\r\n}"
+            },
+            "url": {
+              "raw": "{{server}}/playlist/user/:USER_ID",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "playlist",
+                "user",
+                ":USER_ID"
+              ],
+              "variable": [
+                {
+                  "key": "USER_ID",
+                  "value": "6a22c5f5d6fabf1d9ee7fecd"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getPlaylistByID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/playlist/:PLAYLIST_ID",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "playlist",
+                ":PLAYLIST_ID"
+              ],
+              "variable": [
+                {
+                  "key": "PLAYLIST_ID",
+                  "value": "6a22d2dee356a461772e135a"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "addVideo",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/playlist/add/:VIDEO_ID/:PLAYLIST_ID",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "playlist",
+                "add",
+                ":VIDEO_ID",
+                ":PLAYLIST_ID"
+              ],
+              "variable": [
+                {
+                  "key": "VIDEO_ID",
+                  "value": "6a22c0f25e2983fa173a2905"
+                },
+                {
+                  "key": "PLAYLIST_ID",
+                  "value": "6a22d2dee356a461772e135a"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "removeVideo",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"name\":\"Backend Tutorials\",\r\n   \"description\":\"All backend learning videos\"\r\n}"
+            },
+            "url": {
+              "raw": "{{server}}/playlist/remove/:VIDEO_ID/:PLAYLIST_ID",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "playlist",
+                "remove",
+                ":VIDEO_ID",
+                ":PLAYLIST_ID"
+              ],
+              "variable": [
+                {
+                  "key": "VIDEO_ID",
+                  "value": "6a22c0f25e2983fa173a2905"
+                },
+                {
+                  "key": "PLAYLIST_ID",
+                  "value": "6a22d2dee356a461772e135a"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updatePlayList",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"name\":\"AI SDE Playlist\",\r\n   \"description\":\"Updated description\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/playlist/:PLAYLIST_ID",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "playlist",
+                ":PLAYLIST_ID"
+              ],
+              "variable": [
+                {
+                  "key": "PLAYLIST_ID",
+                  "value": "6a22d2dee356a461772e135a"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deletePlaylist",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/playlist/:PLAYLIST_ID",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "playlist",
+                ":PLAYLIST_ID"
+              ],
+              "variable": [
+                {
+                  "key": "PLAYLIST_ID",
+                  "value": "6a22d2dee356a461772e135a"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "getChannelStats",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTIyYzVmNWQ2ZmFiZjFkOWVlN2ZlY2QiLCJlbWFpbCI6InNhaGRldmFsaXNoMEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InNhaGRldmFsaXNoMEBnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkFsaXNoIFNhaGRldiIsImlhdCI6MTc4MDY2NDEyMywiZXhwIjoxNzgwNzUwNTIzfQ.4C7qCpsqstmoCz1m6Ilpnfbypg_QjkwbG_z5VRp0ToU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"name\":\"Backend Tutorials\",\r\n   \"description\":\"All backend learning videos\"\r\n}"
+            },
+            "url": {
+              "raw": "{{server}}/dashboard/stats",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "dashboard",
+                "stats"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getChannelVideo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/dashboard/videos",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "dashboard",
+                "videos"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "HealthCheck",
+      "item": [
+        {
+          "name": "healthcheck",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
