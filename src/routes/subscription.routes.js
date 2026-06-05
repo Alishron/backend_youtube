@@ -1,19 +1,31 @@
 import { Router } from 'express';
+
 import {
     getSubscribedChannels,
     getUserChannelSubscribers,
     toggleSubscription,
 } from "../controllers/subscription.controller.js"
-import {verifyJWT} from "../middlewares/auth.middleware.js"
 
-const router = Router();
-router.use(verifyJWT); // Apply verifyJWT middleware to all routes in this file
+import { verifyJWT } from "../middlewares/auth.middleware.js"
 
-router
-    .route("/c/:channelId")
-    .get(getSubscribedChannels)
-    .post(toggleSubscription);
+const router = Router()
 
-router.route("/u/:subscriberId").get(getUserChannelSubscribers);
+router.use(verifyJWT)
+
+
+// subscribe / unsubscribe
+router.route("/c/:channelId")
+.post(toggleSubscription)
+
+
+// get subscribers of a channel
+router.route("/c/:channelId")
+.get(getUserChannelSubscribers)
+
+
+// get channels subscribed by user
+router.route("/u/:subscriberId")
+.get(getSubscribedChannels)
+
 
 export default router
